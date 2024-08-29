@@ -1,0 +1,6 @@
+What is CORS?
+Imagine you have a website, let's call it Website A. This website is hosted at www.website-a.com. Now, let's say Website A wants to fetch some data from another website, called Website B, which is hosted at www.website-b.com.
+
+Normally, web browsers have a security feature called the Same-Origin Policy. This policy means that a website can only make requests to its own domain (i.e., www.website-a.com can only request data from www.website-a.com). It’s like a rule that says, "You can only talk to yourself."
+
+But what if Website A needs to get data from Website B? That’s where CORS comes in.
