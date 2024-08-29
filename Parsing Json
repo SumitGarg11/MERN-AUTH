@@ -1,0 +1,37 @@
+Parsing JSON Data:
+
+When a client sends data to your server (for example, via a POST request), 
+that data is often sent in JSON format. The express.json() middleware parses 
+this JSON data and makes it available in req.body within your route handlers.
+Without this middleware, the JSON data sent in the request body would not be
+automatically parsed, and you would need to manually handle it.
+
+app.use(express.json());
+how work going on actually behind the secen 
+
+When you send this POST request, here's what happens behind the scenes:
+Server Receives the Request: Your server sees that a request has been made to /user.
+Server Reads the Name: The server looks inside the request body (the JSON data you sent) and extracts the name "John Doe".
+Server Stores the Name: The server saves this name in a variable (in our example, the variable is storedName).
+Server Responds: The server sends back a message to Postman saying, "User John Doe has been added!"
+GET Request to /user:
+
+Now, you want to see what name has been stored. You open your browser or Postman and go to http://localhost:7000/user.
+Here's what happens behind the scenes:
+Server Receives the Request: Your server sees that a request has been made to /user (but this time it's a GET request).
+Server Checks the Stored Name: The server checks if the name "John Doe" (or any name) has been stored.
+Server Responds: The server sends back a message saying, "Stored user name is: John Doe", which you see in your browser or Postman.
+Simple Example:
+Sending the Name (POST Request):
+
+You send a POST request with the name "John Doe".
+The server saves this name.
+The server replies to Postman: "User John Doe has been added!"
+Retrieving the Name (GET Request):
+
+You visit http://localhost:7000/user.
+The server checks what name it saved.
+The server replies: "Stored user name is: John Doe", and you see this in your browser or Postman.
+Summary:
+POST /user: You send data (the user's name) to the server, and the server stores it.
+GET /user: You request the stored data (the user's name), and the server sends it back to you.
